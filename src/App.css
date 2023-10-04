@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container header {
+  width: 100%;
+  box-shadow: 0px 0px 3px 0px gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container header .title a {
+  color: black;
+  font-size: larger;
+  font-family: "Century Gothic";
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container header ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.container header ul li {
+  list-style-type: none;
+}
+.container header ul li a {
+  color: black;
+  transition: all 0.5s;
+}
+.container header ul li a:hover {
+  text-decoration: underline;
+}
+.container header ul li #signUp {
+  border: 1px solid #007bff;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #007bff;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.container header ul li #signUp:hover {
+  background-color: #007bff;
+  color: white;
+}
+.container .middle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 80px;
+}
+.container .middle .pricing {
+  font-size: 55px;
+  font-family: "Century Gothic";
+  font-weight: 400;
+}
+.container .middle p {
+  width: 40%;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  font-weight: 400;
+}
+.container .middle .main-box {
+  display: flex;
+  padding: 40px;
+  width: 70%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid #dfdfdf;
+}
+.container .middle .main-box .box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dfdfdf;
+  align-items: center;
+  justify-content: space-between;
+  width: 25%;
+  height: 35vh;
+  border-radius: 5px;
+}
+.container .middle .main-box .box span {
+  background-color: #f7f7f7;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px;
+  font-size: 22px;
+  border-bottom: 1px solid #dfdfdf;
+}
+.container .middle .main-box .box .price {
+  font-family: "Century Gothic";
+  font-weight: 100;
+  color: gray;
+  font-size: 37px;
+}
+.container .middle .main-box .box .price b {
+  color: black;
+}
+.container .middle .main-box .box .texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .middle .main-box .box .texts h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.container .middle .main-box .box a {
+  width: 80%;
+  text-align: center;
+  display: block;
+  border: 1px solid;
+  margin-bottom: 20px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #007bff;
+  transition: all 0.5s;
+}
+.container .middle .main-box .box a:hover {
   color: white;
+  background-color: #007bff;
 }
-
-.App-link {
-  color: #61dafb;
+.container footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  width: 60%;
+  margin: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container footer .box {
+  width: 30%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
 }
+.container footer .box a {
+  color: #6c757d;
+}
+.container footer .one {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container footer .one .bi-bootstrap {
+  color: purple;
+  margin-bottom: 10px;
+}
+.container footer .two h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.container footer .two ul li {
+  list-style-type: none;
+}
+.container footer .three h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.container footer .three ul li {
+  list-style-type: none;
+}
+.container footer .four h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.container footer .four ul li {
+  list-style-type: none;
+}/*# sourceMappingURL=App.css.map */
