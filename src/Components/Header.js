@@ -9,48 +9,14 @@ const HeaderData = [
   { signUp: "Sign Up" },
 ];
 
-const ulData = [
-  {
-    li: (
-      <li>
-        <a href="!#">{HeaderData[1].features}</a>
-      </li>
-    ),
-  },
-
-  {
-    li: (
-      <li>
-        <a href="!#">{HeaderData[2].enterprise}</a>
-      </li>
-    ),
-  },
-
-  {
-    li: (
-      <li>
-        <a href="!#">{HeaderData[3].support}</a>
-      </li>
-    ),
-  },
-
-  {
-    li: (
-      <li>
-        <a href="!#">{HeaderData[4].pricing}</a>
-      </li>
-    ),
-  },
-
-  {
-    li: (
-      <li>
-        <a href="!#" id="signUp">
-          {HeaderData[5].signUp}
-        </a>
-      </li>
-    ),
-  },
+const links = [
+  <a href="!#">{HeaderData[1].features}</a>,
+  <a href="!#">{HeaderData[2].enterprise}</a>,
+  <a href="!#">{HeaderData[3].support}</a>,
+  <a href="!#">{HeaderData[4].pricing}</a>,
+  <a href="!#" id="signUp">
+    {HeaderData[5].signUp}
+  </a>,
 ];
 
 class Header extends Component {
@@ -62,9 +28,11 @@ class Header extends Component {
         </div>
 
         <ul>
-          {ulData.map((item, index) => {
-            return item.li;
-          })}
+          <li>
+            {links.map((item, index) => {
+              return item;
+            })}
+          </li>
         </ul>
       </header>
     );

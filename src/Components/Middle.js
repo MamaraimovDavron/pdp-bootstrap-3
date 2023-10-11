@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Card from "./Card";
 
 export default class Middle extends Component {
   render() {
@@ -12,37 +13,7 @@ export default class Middle extends Component {
         </p>
 
         <div className="main-box">
-          <div className="box">
-            <span>Free</span>
-            <h1 className="price">
-              <b>$0 </b> /mo
-            </h1>
-
-            <div className="texts">
-              <h3>10 users included</h3>
-              <h3>2 GB of storage</h3>
-              <h3>Email support</h3>
-              <h3>Help center access</h3>
-            </div>
-
-            <a href="!#">Sign up for free</a>
-          </div>
-
-          <div className="box">
-            <span>Pro</span>
-            <h1 className="price">
-              <b>$15 </b> /mo
-            </h1>
-
-            <div className="texts">
-              <h3>20 users included</h3>
-              <h3>10 GB of storage</h3>
-              <h3>Priority email support</h3>
-              <h3>Help center access</h3>
-            </div>
-
-            <a href="!#">Get started</a>
-          </div>
+          <Card />
 
           <div className="box">
             <span>Enterprise</span>
