@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Card from "./Card";
 
 export default class Middle extends Component {
-  render() {
+  render(props) {
     return (
       <div className="middle">
         <h1 className="pricing">Pricing</h1>
@@ -13,23 +13,35 @@ export default class Middle extends Component {
         </p>
 
         <div className="main-box">
-          <Card />
+          <Card
+            span="Free"
+            price="0"
+            info1="10 users included"
+            info2="2 GB of storage"
+            info3="Email support"
+            info4="Help center access"
+            btn="Sign up for free"
+          />
 
-          <div className="box">
-            <span>Enterprise</span>
-            <h1 className="price">
-              <b>$29 </b> /mo
-            </h1>
+          <Card
+            span="Pro"
+            price="15"
+            info1="20 users included"
+            info2="10 GB of storage"
+            info3="Priority email support"
+            info4="Help center access"
+            btn="Get started"
+          />
 
-            <div className="texts">
-              <h3>30 users included</h3>
-              <h3>15 GB of storage</h3>
-              <h3>Phone and email support</h3>
-              <h3>Help center access</h3>
-            </div>
-
-            <a href="!#">Contact Us</a>
-          </div>
+          <Card
+            span="Enterprise"
+            price="29"
+            info1="30 users included"
+            info2="15 GB of storage"
+            info3="Phone and email support"
+            info4="Help center access"
+            btn="Contact Us"
+          />
         </div>
       </div>
     );

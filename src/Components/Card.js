@@ -2,21 +2,22 @@ import React, { Component } from "react";
 
 export class Card extends Component {
   render() {
+    const { span, price, info1, info2, info3, info4, btn } = this.props;
     return (
       <div className="box">
-        <span>Free</span>
+        <span>{span}</span>
         <h1 className="price">
-          <b>$0 </b> /mo
+          <b>$ {price}</b> /mo
         </h1>
 
         <div className="texts">
-          <h3>10 users included</h3>
-          <h3>2 GB of storage</h3>
-          <h3>Email support</h3>
-          <h3>Help center access</h3>
+          <h3>{info1}</h3>
+          <h3>{info2}</h3>
+          <h3>{info3}</h3>
+          <h3>{info4}</h3>
         </div>
 
-        <a href="!#">Sign up for free</a>
+        <a href="!#">{btn}</a>
       </div>
     );
   }
