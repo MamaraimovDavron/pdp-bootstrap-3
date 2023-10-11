@@ -1,22 +1,12 @@
 import React, { Component } from "react";
 
-const HeaderData = [
-  { companyName: "Company Name" },
-  { features: "Features" },
-  { enterprise: "Enterprise" },
-  { support: "Support" },
-  { pricing: "Pricing" },
-  { signUp: "Sign Up" },
-];
-
-const links = [
-  <a href="!#">{HeaderData[1].features}</a>,
-  <a href="!#">{HeaderData[2].enterprise}</a>,
-  <a href="!#">{HeaderData[3].support}</a>,
-  <a href="!#">{HeaderData[4].pricing}</a>,
-  <a href="!#" id="signUp">
-    {HeaderData[5].signUp}
-  </a>,
+let menu = [
+  "Company Name",
+  "Features",
+  "Enterprise",
+  "Support",
+  "Pricing",
+  "Sign Up",
 ];
 
 class Header extends Component {
@@ -24,14 +14,20 @@ class Header extends Component {
     return (
       <header>
         <div className="title">
-          <a href="!#">{HeaderData[0].companyName}</a>
+          <a href="!#">{menu[0]}</a>
         </div>
 
         <ul>
           <li>
-            {links.map((item, index) => {
-              return item;
+            {menu.map((item, index) => {
+              if (index > 0 && index < 5) return <a href="!#">{item}</a>;
             })}
+          </li>
+
+          <li>
+            <a href="!#" id="signUp">
+              {menu[5]}
+            </a>
           </li>
         </ul>
       </header>
