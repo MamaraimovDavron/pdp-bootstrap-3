@@ -1,5 +1,25 @@
 import React, { Component } from "react";
-import Card from "./Card";
+
+const card1 = [
+  "10 users included",
+  "2 GB of storage",
+  "Email support",
+  "Help center access",
+];
+
+const card2 = [
+  "20 users included",
+  "10 GB of storage",
+  "Priority email support",
+  "Help center access",
+];
+
+const card3 = [
+  "30 users included",
+  "15 GB of storage",
+  "Phone and email support",
+  "Help center access",
+];
 
 export default class Middle extends Component {
   render(props) {
@@ -13,35 +33,50 @@ export default class Middle extends Component {
         </p>
 
         <div className="main-box">
-          <Card
-            span="Free"
-            price="0"
-            info1="10 users included"
-            info2="2 GB of storage"
-            info3="Email support"
-            info4="Help center access"
-            btn="Sign up for free"
-          />
+          <div className="box">
+            <span>Free</span>
+            <h1 className="price">
+              <b>$ 0</b> /mo
+            </h1>
 
-          <Card
-            span="Pro"
-            price="15"
-            info1="20 users included"
-            info2="10 GB of storage"
-            info3="Priority email support"
-            info4="Help center access"
-            btn="Get started"
-          />
+            <ul className="texts">
+              {card1.map((item, index) => {
+                return <li>{item}</li>;
+              })}
+            </ul>
 
-          <Card
-            span="Enterprise"
-            price="29"
-            info1="30 users included"
-            info2="15 GB of storage"
-            info3="Phone and email support"
-            info4="Help center access"
-            btn="Contact Us"
-          />
+            <a href="!#">Sign up for free</a>
+          </div>
+
+          <div className="box">
+            <span>Pro</span>
+            <h1 className="price">
+              <b>$ 15</b> /mo
+            </h1>
+
+            <ul className="texts">
+              {card2.map((item, index) => {
+                return <li>{item}</li>;
+              })}
+            </ul>
+
+            <a href="!#">Get started</a>
+          </div>
+
+          <div className="box">
+            <span>Enterprise</span>
+            <h1 className="price">
+              <b>$ 29</b> /mo
+            </h1>
+
+            <ul className="texts">
+              {card3.map((item, index) => {
+                return <li>{item}</li>;
+              })}
+            </ul>
+
+            <a href="!#">Contact Us</a>
+          </div>
         </div>
       </div>
     );
