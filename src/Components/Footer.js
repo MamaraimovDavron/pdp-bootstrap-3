@@ -1,5 +1,23 @@
 import React, { Component } from "react";
 
+const link1 = [
+  "Cool stuff",
+  "Random feature",
+  "Team feature",
+  "Stuff for developers",
+  "Another one",
+  "Last time",
+];
+
+const link2 = [
+  "Resource",
+  "Resource name",
+  "Another resource",
+  "Final resource",
+];
+
+const link3 = ["Team", "Locations", "Privacy", "Terms"];
+
 export default class Footer extends Component {
   render() {
     return (
@@ -23,22 +41,9 @@ export default class Footer extends Component {
           <h1>Features</h1>
           <ul>
             <li>
-              <a href="!#">Cool stuff</a>
-            </li>
-            <li>
-              <a href="!#">Random feature</a>
-            </li>
-            <li>
-              <a href="!#">Team feature</a>
-            </li>
-            <li>
-              <a href="!#">Stuff for developers</a>
-            </li>
-            <li>
-              <a href="!#">Another one</a>
-            </li>
-            <li>
-              <a href="!#">Last time</a>
+              {link1.map((item, index) => (
+                <a href="!#">{item}</a>
+              ))}
             </li>
           </ul>
         </div>
@@ -46,16 +51,9 @@ export default class Footer extends Component {
           <h1>Resources</h1>
           <ul>
             <li>
-              <a href="!#">Resource</a>
-            </li>
-            <li>
-              <a href="!#">Resource name</a>
-            </li>
-            <li>
-              <a href="!#">Another resource</a>
-            </li>
-            <li>
-              <a href="!#">Final resource</a>
+              {link2.map((item, index) => (
+                <a href="!#">{item}</a>
+              ))}
             </li>
           </ul>
         </div>
@@ -63,16 +61,9 @@ export default class Footer extends Component {
           <h1>About</h1>
           <ul>
             <li>
-              <a href="!#">Team</a>
-            </li>
-            <li>
-              <a href="!#">Locations</a>
-            </li>
-            <li>
-              <a href="!#">Privacy</a>
-            </li>
-            <li>
-              <a href="!#">Terms</a>
+              {link3.map((item) => (
+                <a href="!#">{item}</a>
+              ))}
             </li>
           </ul>
         </div>

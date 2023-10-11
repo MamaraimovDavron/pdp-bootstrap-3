@@ -163,6 +163,8 @@
 }
 .container footer .two ul li {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 .container footer .three h1 {
   font-size: 20px;
@@ -171,6 +173,8 @@
 }
 .container footer .three ul li {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 .container footer .four h1 {
   font-size: 20px;
@@ -179,4 +183,6 @@
 }
 .container footer .four ul li {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=App.css.map */
